@@ -2,17 +2,23 @@
   "name": "raureif-typescript",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "directories": {
     "test": "tests"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+    "raureif-addon"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "raureif": "^1.6.0"
+  },
+  "dependencies": {
+    "broccoli-typescript-compiler": "^1.0.1",
+    "typescript": "^2.4.1"
   }
 }
