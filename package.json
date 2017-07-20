@@ -13,7 +13,7 @@
     "raureif-addon"
   ],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "raureif": "^1.6.0"
   },
