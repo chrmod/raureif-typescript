@@ -29,6 +29,6 @@
     "broccoli-typescript-compiler": "^1.0.1"
   },
   "devDependencies": {
-    "raureif": "^1.8.0"
+    "raureif": "2.0.6"
   }
 }
