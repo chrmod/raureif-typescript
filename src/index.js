@@ -1,4 +1,4 @@
-import TypescriptCompiler from 'broccoli-typescript-compiler';
+import { typescript } from 'broccoli-typescript-compiler';
 import Funnel from 'broccoli-funnel';
 import MergeTrees from 'broccoli-merge-trees';
 import path from 'path';
@@ -25,7 +25,7 @@ export default {
       }),
     ]);
 
-    const tsTree = TypescriptCompiler.typescript(input, {
+    const tsTree = typescript(input, {
       tsconfig: {
         compilerOptions: {
           target: 'es5',
@@ -52,13 +52,6 @@ export default {
       },
     });
 
-    return new MergeTrees([
-      new Funnel(inputTree, {
-        exclude: ['**/*.ts'],
-      }),
-      new Funnel(tsTree, {
-        srcDir: tmpDir,
-      }),
-    ], { overwrite: true });
+    return tsTree;
   },
 };
